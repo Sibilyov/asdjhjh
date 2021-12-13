@@ -241,3 +241,56 @@ function getDays(y, m) {
 console.log(getDays(2004, 01) + " дн.");
 console.log(getDays(1999, 02) + " дн."); 
 console.log(getDays(2021, 03) + " дн.");
+
+//17
+function sortByName(humans) {
+    for (let i = 0; i < humans.length - 1; i++) {
+        for (let j = i + 1; j < humans.length; j++) {
+            if (humans[i].name > humans[j].name) {
+                let max = humans[i];
+                humans[i] = humans[j];
+                humans[j] = max;
+            }
+        }
+    }
+    return humans;
+}
+function sortByHeight(humans) {
+    for (let i = 0; i < humans.length - 1; i++) {
+        for (let j = i + 1; j < humans.length; j++) {
+            if (humans[i].height < humans[j].height) {
+                let min = humans[i];
+                humans[i] = humans[j];
+                humans[j] = min;
+            }
+        }
+    }
+    return humans;
+}
+console.log(sortByHeight(humans));
+
+//6
+let obj = {};
+obj.method3 = function () {
+    return "метод3";
+};
+obj.method2 = function () {
+    return this;
+};
+obj.method1 = function () {
+    return this;
+};
+console.log(obj.method1().method2().method3());
+
+//11
+let d5 = [];
+let n = 3;
+let m = 4;
+for (let i = 0; i < n; i++) {
+    d5[i] = [];
+    for (let j = 0; j < m; j++) {
+        d5[i][j] = 5;
+    }
+}
+console.log(d5);
+
